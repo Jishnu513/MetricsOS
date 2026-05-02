@@ -47,9 +47,9 @@ export async function GET(request: NextRequest) {
   // ATTEMPT TO USE REAL SUPABASE DATABASE
   // If the user hasn't set up the keys or tables, this will gracefully fall back to mock data.
   try {
-    if (process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_URL !== "your-supabase-project-url") {
-      const { data: dbMetrics, error: metricsErr } = await supabase.from('metrics').select('*');
-      const { data: dbTx, error: txErr } = await supabase.from('transactions').select('*').order('time', { ascending: false }).limit(10);
+    if (supabase && process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_URL !== "your-supabase-project-url") {
+      const { data: dbMetrics, error: metricsErr } = await supabase!.from('metrics').select('*');
+      const { data: dbTx, error: txErr } = await supabase!.from('transactions').select('*').order('time', { ascending: false }).limit(10);
       
       if (!metricsErr && dbMetrics && dbMetrics.length > 0) {
         finalMetrics = dbMetrics as any;
