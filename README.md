@@ -2,10 +2,15 @@
 
 > A production-grade, AI-powered business analytics platform built with Next.js 15, TypeScript, Supabase, and OpenAI.
 
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-metrics--os.vercel.app-2563eb?style=for-the-badge)](https://metrics-os.vercel.app)
+
 ![MetricsOS Dashboard](https://img.shields.io/badge/MetricsOS-v1.0-2563eb?style=flat-square)
 ![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=nextdotjs)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)
 ![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ecf8e?style=flat-square&logo=supabase)
+![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-black?style=flat-square&logo=vercel)
+
+**🔗 Live:** [https://metrics-os.vercel.app](https://metrics-os.vercel.app) — Click **"Demo Login (Admin)"** to explore instantly.
 
 ---
 
@@ -42,8 +47,8 @@
 ### 1. Clone and Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ai-dashboard.git
-cd ai-dashboard
+git clone https://github.com/Jishnu513/MetricsOS.git
+cd MetricsOS
 npm install
 ```
 
@@ -108,7 +113,7 @@ cat supabase/schema.sql
 1. Go to [Google Cloud Console](https://console.cloud.google.com) → APIs & Services → Credentials
 2. Create an **OAuth 2.0 Client ID** (Web application)
 3. Add authorized redirect URI: `http://localhost:3000/api/auth/callback/google`
-4. For production, also add: `https://your-domain.vercel.app/api/auth/callback/google`
+4. For production, also add: `https://metrics-os.vercel.app/api/auth/callback/google`
 5. Copy Client ID and Secret to `.env.local`
 
 ---
